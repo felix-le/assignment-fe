@@ -5,12 +5,14 @@ interface CheckboxProps {
   values: string[];
   selectedValues: string[];
   onChange: (selectedValues: string[]) => void;
+  disabled: boolean;
 }
 
 const CheckBoxComponent: React.FC<CheckboxProps> = ({
   values,
   selectedValues,
   onChange,
+  disabled,
 }) => {
   const containerRef = useRef<HTMLLabelElement>(null);
 
@@ -47,6 +49,7 @@ const CheckBoxComponent: React.FC<CheckboxProps> = ({
           ref={containerRef}
         >
           <Checkbox
+            disabled={disabled}
             checked={selectedValues.includes(option)}
             onChange={(e: CheckboxChangeEvent) => onCheckboxChange(option)}
             className="checkbox-brand text-base ant-radio-input mb-4"

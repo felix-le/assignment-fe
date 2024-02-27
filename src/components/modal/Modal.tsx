@@ -8,17 +8,9 @@ import ButtonComponent from "../elements/ButtonComponent";
 const tools = ["Redux", "Lodash", "Ant design", "Webpack", "Other"];
 
 function Modal() {
-  const [isYesSelected, setIsYesSelected] = useState(false);
-
-  const [selectedValues, setSelectedValues] = useState<string[]>([]);
-
-  const handleRadiosChange = (newValues: string[]) => {
-    setSelectedValues(newValues);
-  };
-
-  const handleRadioChange = (value: boolean) => {
-    setIsYesSelected(value);
-  };
+  const [isEditable, setIsEditable] = useState(false);
+  const [isProficient, setIsProficient] = useState(false);
+  const [selectedTools, setSelectedTools] = useState<string[]>([]);
 
   const handleSubmit = () => {
     // Handle submit logic
@@ -27,9 +19,17 @@ function Modal() {
 
   return (
     <div className="flex justify-center items-center flex-col">
-      <SwitchModalTitle title="Editable" />
+      <SwitchModalTitle
+        title="Editable"
+        value={isEditable}
+        onChange={setIsEditable}
+      />
       <QuestionSection question="Are you proficient in ReactJS development?">
-        <RadioComponent value={isYesSelected} onChange={handleRadioChange} />
+        <RadioComponent
+          disabled={!isEditable}
+          value={isProficient}
+          onChange={setIsProficient}
+        />
       </QuestionSection>
       <QuestionSection
         question="Which tools do you use?"
@@ -37,8 +37,9 @@ function Modal() {
       >
         <CheckBoxComponent
           values={tools}
-          selectedValues={selectedValues}
-          onChange={handleRadiosChange}
+          selectedValues={selectedTools}
+          onChange={setSelectedTools}
+          disabled={!isEditable}
         />
       </QuestionSection>
       <ButtonComponent buttonName="Process" handleOnSubmit={handleSubmit} />

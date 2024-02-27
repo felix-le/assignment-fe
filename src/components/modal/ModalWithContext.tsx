@@ -1,13 +1,8 @@
 import { Button } from "antd";
 
-import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "../../redux/actions/modalActions";
-
 import Modal from "./Modal";
 
 function ModalsWithContext() {
-  const count = useSelector((state: any) => state.count);
-  const dispatch = useDispatch();
   return (
     <div className="flex justify-center items-center w-full flex-col pt-[10%]">
       <div className="h-full max-w-full bg-white p-[40px] min-w-[410px]">

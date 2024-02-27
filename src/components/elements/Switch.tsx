@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Switch } from "antd";
 
-const SwitchComponent: React.FC = () => {
-  const [isChecked, setChecked] = useState<boolean>(true);
+interface IProp {
+  value: boolean;
+  onChange: (newValue: boolean) => void;
+}
 
-  const onChange = (checked: boolean) => {
-    console.log(`switch to ${checked}`);
-    setChecked(checked);
-  };
-
+const SwitchComponent: React.FC<IProp> = ({ value, onChange }) => {
   return (
     <Switch
-      checked={isChecked}
+      checked={value}
       onChange={onChange}
       className={`
         w-[45px] h-[22px] switch-brand
       ${
-        isChecked === true
+        value === true
           ? "switch-brand-checked"
           : "bg-transparent switch-brand-unchecked"
       }  `}

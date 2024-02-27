@@ -5,12 +5,18 @@ import { Radio } from "antd";
 interface RadioComponentProps {
   value: boolean;
   onChange: (value: boolean) => void;
+  disabled: boolean;
 }
 
-const RadioComponent: React.FC<RadioComponentProps> = ({ value, onChange }) => {
+const RadioComponent: React.FC<RadioComponentProps> = ({
+  value,
+  onChange,
+  disabled,
+}) => {
   const [radioValue, setRadioValue] = useState(value ? "Yes" : "No");
 
   const onRadioChange = (e: RadioChangeEvent) => {
+    if (disabled) return;
     const newValue = e.target.value === "Yes";
     setRadioValue(e.target.value);
     onChange(newValue);
@@ -21,6 +27,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({ value, onChange }) => {
       onChange={onRadioChange}
       value={radioValue}
       className="flex justify-start items-start flex-col"
+      disabled={disabled}
     >
       {["No", "Yes"].map((option, index) => (
         <Radio

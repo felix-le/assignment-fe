@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "antd";
 import type { ConfigProviderProps } from "antd";
 
 type SizeType = ConfigProviderProps["componentSize"];
-
 interface ButtonComponentProps {
   buttonName: string;
   handleOnSubmit: () => void;

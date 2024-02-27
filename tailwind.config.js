@@ -8,8 +8,12 @@ module.exports = {
       primary: "#000",
       secondary: "rgb(102, 102, 102)",
       white: "#fff",
-      brand: "#6b47ed",
+      brand: {
+        primary: "#6b47ed",
+        secondary: "#D4CCF7",
+      },
       gray: "#F5F5F5",
+
       // ...defaultTheme.colors
     },
     fontSize: {
@@ -46,9 +50,10 @@ module.exports = {
     //   lg: "12px",
     //   xl: "24px",
     // },
-    // corePlugins: {
-    //   container: false,
-    // },
+    corePlugins: {
+      preflight: false,
+    },
+    important: true,
     extend: {
       fontFamily: {
         sans: ["Open Sans", "sans-serif", ...defaultTheme.fontFamily.sans],

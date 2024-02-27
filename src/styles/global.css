@@ -32,3 +32,27 @@ h5,
 h6 {
   font-family: "Nunito-Bold", sans-serif;
 }
+
+.switch-brand-checked {
+  background: theme("colors.brand.primary") !important;
+  /* box shadow bottom*/
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.switch-brand .ant-switch-handle {
+  width: 13.62px;
+  height: 13.24px;
+  top: 20%;
+}
+
+.switch-brand-unchecked {
+  border: 1px solid theme("colors.brand.secondary") !important;
+}
+.switch-brand-unchecked .ant-switch-handle:before {
+  background-color: theme("colors.brand.primary") !important;
+}
+/* .switch-brand; */
+
+.switch-brand.switch-brand-unchecked:hover {
+  background-color: transparent;
+  opacity: 0.7;
+}

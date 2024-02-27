@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { Checkbox } from "antd";
 import { CheckboxChangeEvent } from "antd/lib/checkbox/Checkbox";
 interface CheckboxProps {

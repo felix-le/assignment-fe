@@ -15,7 +15,7 @@ const QuestionSection: React.FC<QuestionSectionProps> = ({
     <div className="w-full mt-[30px]">
       <div className="w-[90%]">
         <h3 className="heading-3 mb-[20px]">{question}</h3>
-        {subTitle && <p className="text-gray-light">{subTitle}</p>}
+        {subTitle && <p className="text-gray-light mb-[20px]">{subTitle}</p>}
         {children}
       </div>
     </div>

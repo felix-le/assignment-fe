@@ -12,13 +12,16 @@ module.exports = {
         primary: "#6b47ed",
         secondary: "#D4CCF7",
       },
-      gray: "#F5F5F5",
-
+      gray: {
+        light: "#979797",
+        DEFAULT: "#F5F5F5",
+      },
       // ...defaultTheme.colors
     },
     fontSize: {
       sm: ["12px", "1.5"],
       base: ["16px", "1.49"],
+      heading: ["20px", "1.58"],
       lg: ["20px", "1.58"],
       xl: ["24px", "1"],
       "2xl": ["32px", "1.32"],
@@ -27,6 +30,10 @@ module.exports = {
       "5xl": ["56px", "1"],
       "6xl": ["64px", "1"],
       "7xl": ["98px", "1"],
+    },
+    fontFamily: {
+      title: ["Nunito-Bold", "sans-serif"],
+      body: ["Nunito", "sans-serif"],
     },
     screens: {
       sm: "640px",

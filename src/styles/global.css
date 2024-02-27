@@ -21,8 +21,8 @@
 
 body {
   font-size: theme("fontSize.base");
-  font-family: "Nunito", sans-serif;
-  background-color: theme("colors.gray");
+  font-family: theme("fontFamily.body");
+  background-color: theme("colors.gray.DEFAULT");
 }
 h1,
 h2,
@@ -55,4 +55,25 @@ h6 {
 .switch-brand.switch-brand-unchecked:hover {
   background-color: transparent;
   opacity: 0.7;
+}
+
+.heading-3 {
+  font-size: theme("fontSize.heading");
+  font-family: theme("fontFamily.title");
+  font-weight: medium;
+  margin-bottom: 10px;
+}
+
+/* Begin Radio */
+
+.radio-brand .ant-wave-target .ant-radio-inner {
+  border: solid 1px theme("colors.brand.primary");
+}
+
+.radio-brand .ant-radio-checked .ant-radio-inner {
+  background-color: theme("colors.brand.primary") !important;
+}
+
+.radio-brand .ant-radio-checked .ant-radio-inner::after {
+  content: none;
 }

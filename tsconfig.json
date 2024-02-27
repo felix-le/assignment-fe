@@ -19,6 +19,7 @@
     "paths": {
       // "@lib/*": ["lib/*"],
       // "@modules/*": ["modules/*"],
+      "@redux/*": ["redux/*"],
       "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
       // "@utils/*": ["utils/*"],

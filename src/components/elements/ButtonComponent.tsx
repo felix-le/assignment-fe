@@ -21,7 +21,6 @@ const ButtonComponent: React.FC<ButtonComponentProps> = ({
     // Additional logic if needed
     handleOnSubmit();
   };
-
   const buttonClassName = `bg-brand-primary mt-4 hover:!bg-brand-secondary ${
     size === "large" ? "min-w-[200px] min-h-[60px]" : ""
   } ${!isEditable ? "cursor-not-allowed" : ""}`;

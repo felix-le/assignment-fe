@@ -19,6 +19,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Nunito-semibold";
+  src: url("./fonts/Nunito-SemiBold.ttf") format("ttf");
+  font-weight: bold;
+  font-display: swap;
+  font-style: normal;
+}
+
 body {
   font-size: theme("fontSize.base");
   font-family: theme("fontFamily.body");

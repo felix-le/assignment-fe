@@ -34,6 +34,7 @@ module.exports = {
     fontFamily: {
       title: ["Nunito-Bold", "sans-serif"],
       body: ["Nunito", "sans-serif"],
+      semibold: ["Nunito-SemiBold", "sans-serif"],
     },
     screens: {
       sm: "640px",
@@ -62,10 +63,6 @@ module.exports = {
     },
     important: true,
     extend: {
-      fontFamily: {
-        sans: ["Open Sans", "sans-serif", ...defaultTheme.fontFamily.sans],
-        title: ["Clear Sans", "sans-serif", ...defaultTheme.fontFamily.sans],
-      },
       flexShrink: {
         0: "0",
         1: "1",

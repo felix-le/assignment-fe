@@ -7,9 +7,19 @@ import ButtonComponent from "../elements/ButtonComponent";
 
 const tools = ["Redux", "Lodash", "Ant design", "Webpack", "Other"];
 
-function Modal() {
+interface ModalProps {
+  toolList: string[];
+  toolsUsedArray: number[];
+  isProficientDefault: boolean;
+}
+
+const Modal: React.FC<ModalProps> = ({
+  toolList,
+  toolsUsedArray,
+  isProficientDefault,
+}) => {
   const [isEditable, setIsEditable] = useState(false);
-  const [isProficient, setIsProficient] = useState(false);
+  const [isProficient, setIsProficient] = useState(isProficientDefault);
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
 
   const handleSubmit = () => {
@@ -45,6 +55,6 @@ function Modal() {
       <ButtonComponent buttonName="Process" handleOnSubmit={handleSubmit} />
     </div>
   );
-}
+};
 
 export default Modal;

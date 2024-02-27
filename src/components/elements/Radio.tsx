@@ -34,7 +34,7 @@ const RadioComponent: React.FC<RadioComponentProps> = ({
           key={option}
           value={option}
           className={`radio-brand text-base${index === 0 ? " mb-4" : ""}${
-            radioValue === option ? "" : " text-gray-light"
+            radioValue === option ? "" : " "
           }`}
         >
           {option}

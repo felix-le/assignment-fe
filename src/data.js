@@ -11,3 +11,5 @@ const data = {
   tools: "Redux, Lodash, Ant design, Webpack, Other",
   toolsUsed: "0,2,3,4",
 };
+
+export default data;

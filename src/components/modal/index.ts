@@ -1,3 +1,3 @@
-import ModalsWithContext from "./ModalWithContext";
+import ModalWithContext from "./ModalWithContext";
 
-export default ModalsWithContext;
+export default ModalWithContext;

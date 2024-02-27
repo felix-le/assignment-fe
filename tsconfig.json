@@ -12,23 +12,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
-    "paths": {
-      // "@lib/*": ["lib/*"],
-      // "@modules/*": ["modules/*"],
-      "@redux/*": ["redux/*"],
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-      // "@utils/*": ["utils/*"],
-      "@images/*": ["images/*"],
-      "@styles/*": ["styles/*"],
-      "@data/*": ["data/*"],
-      // "@services/*": ["services/*"],
-      "@inteface/*": ["inteface/*"]
-    }
+    "baseUrl": "./src"
   },
-  "include": ["src"]
+  "include": ["./src/**/*"]
 }

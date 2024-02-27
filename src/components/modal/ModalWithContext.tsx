@@ -1,9 +1,9 @@
 import { Button } from "antd";
 
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "@redux/actions/modalActions";
+import { increment, decrement } from "../../redux/actions/modalActions";
 
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
 function ModalsWithContext() {
   const count = useSelector((state: any) => state.count);
@@ -23,7 +23,7 @@ function ModalsWithContext() {
         Increment
       </Button>
       <Button onClick={() => dispatch(decrement())}>Decrement</Button>
-      <Modal />
+      {/* <Modal /> */}
     </>
   );
 }

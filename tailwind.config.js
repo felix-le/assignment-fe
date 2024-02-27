@@ -5,14 +5,11 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
-      primary: "#f18a00",
+      primary: "#000",
       secondary: "rgb(102, 102, 102)",
-      // primary: "#6c2e1f",
-      black: "#000",
       white: "#fff",
-      red: "#dc2626",
-      green: "#059669",
-      blue: "#348efe",
+      brand: "#6b47ed",
+      gray: "#F5F5F5",
       // ...defaultTheme.colors
     },
     fontSize: {
@@ -34,24 +31,24 @@ module.exports = {
       xl: "1280px",
       "2xl": "1440px",
     },
-    borderWidth: {
-      DEFAULT: "1px",
-      0: "0",
-      2: "2px",
-      3: "3px",
-      4: "4px",
-      6: "6px",
-    },
-    borderRadius: {
-      DEFAULT: "0",
-      xs: "2px",
-      md: "3px",
-      lg: "12px",
-      xl: "24px",
-    },
-    corePlugins: {
-      container: false,
-    },
+    // borderWidth: {
+    //   DEFAULT: "1px",
+    //   0: "0",
+    //   2: "2px",
+    //   3: "3px",
+    //   4: "4px",
+    //   6: "6px",
+    // },
+    // borderRadius: {
+    //   DEFAULT: "0",
+    //   xs: "2px",
+    //   md: "3px",
+    //   lg: "12px",
+    //   xl: "24px",
+    // },
+    // corePlugins: {
+    //   container: false,
+    // },
     extend: {
       fontFamily: {
         sans: ["Open Sans", "sans-serif", ...defaultTheme.fontFamily.sans],

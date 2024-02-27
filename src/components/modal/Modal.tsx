@@ -52,7 +52,11 @@ const Modal: React.FC<ModalProps> = ({
           disabled={!isEditable}
         />
       </QuestionSection>
-      <ButtonComponent buttonName="Process" handleOnSubmit={handleSubmit} />
+      <ButtonComponent
+        buttonName="Process"
+        handleOnSubmit={handleSubmit}
+        isEditable={isEditable}
+      />
     </div>
   );
 };

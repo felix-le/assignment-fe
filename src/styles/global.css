@@ -177,3 +177,10 @@ h6 {
   .ant-checkbox-inner {
   background-color: theme("colors.brand.primary");
 }
+
+.ant-btn-primary:disabled,
+.ant-btn-primary.ant-btn-disabled {
+  background-color: theme("colors.brand.primary");
+  color: white;
+  opacity: 0.5;
+}

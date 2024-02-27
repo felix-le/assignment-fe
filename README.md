@@ -13,6 +13,6 @@
 3. Run `Yarn`
 4. Run `Yarn start`
 
-# install dependencies
+# Software versions:
 
 1. Node version: `v20.10.0`
